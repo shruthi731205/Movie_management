@@ -1,0 +1,44 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#movie {
+   font-family: Calligraphy;
+   font-size: small;
+   font-color:BlueViolet;
+   background-image:url('index.jpeg');
+}
+
+#header {
+   text-align: center;
+   padding-bottom: 15px;
+   font-family: georgia;
+   font-color: Indigo;
+   background-color:Orange;
+}
+
+#data{
+	table, th, td
+{
+text-align: center;
+border: 1px solid black;
+border-style:solid;
+width:50%;
+height:50px;
+
+}
+}
+
+#sign
+{
+ text-align: right;
+}
+
+#footer {
+   text-align: Right;
+   padding-bottom: 15px;
+   font-family: georgia;
+   background-color:Orange;
+}
+
+

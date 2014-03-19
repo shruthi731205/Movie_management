@@ -1,0 +1,45 @@
+<center><h1 style="color:Red">View Details</h1>
+<%= form_for @post do |f| %>
+<p><table border:2px black>
+      <tr>
+          <td> <%= f.label "name" %></td>
+          <td> <%= f.text_field :Name , :disabled=>true %></td>
+      </tr>
+        <tr>
+          <td>Movie Screen:</td>
+          <td><%= f.radio_button :Movie_Scree, "1", :disabled=>true%>
+                <%= f.label :Movie_Scree, "1" %><br>
+                <%= f.radio_button :Movie_Scree, "2", :disabled=>true %>
+                <%= f.label :Movie_Scree, "2" %><br>
+                <%= f.radio_button :Movie_Scree, "3", :disabled=>true %>
+                <%= f.label :Movie_Scree, "3" %><br>
+                <%= f.radio_button :Movie_Scree, "4" , :disabled=>true %>
+                <%= f.label :Movie_Scree, "4" %><br>
+                <%= f.radio_button :Movie_Scree, "5" ,:disabled=>true %>
+                <%= f.label :Movie_Scree, "5" %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.label :Language, "MultiLanguage" %></td>
+          <td><%= f.check_box :Language ,:disabled=>true  %></td>
+        </tr>
+
+        <tr>
+          <td><%= f.label :Price %></td>
+          <td><%= f.text_field :Price, :disabled=>true %></td>
+        </tr>
+
+        <tr>
+          <td> <%= f.label :Description %></td>
+          <td><%= f.text_area :Description, :disabled=>true  %></td>
+        </tr>
+ 
+        <tr>
+          <td></td>
+          <td><%= link_to 'Home', root_path %></td>
+        </tr>
+
+</table></p>
+<%= image_tag @post.photo.url %>
+<% end %>
+</center>

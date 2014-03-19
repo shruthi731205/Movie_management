@@ -1,0 +1,47 @@
+<center><h1 style="color:Red">List of Movies</h1>
+
+
+<%= paginate @posts %>
+
+
+<p>
+  Download:
+  <%= link_to "CSV", posts_path(format: "csv") %> |
+  <%= link_to "Excel", posts_path(format: "xls") %>
+</p>
+
+
+
+    <p><table id= "data">
+        <tr style="text-align: middle;">
+            <th>Name</th>
+            <th>Language</th>
+            <th>Movie Screen</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Destroy</th>
+        </tr>
+
+<% @posts.each do |post| %>
+    <tr style="text-align: middle; vertical-align: middle;">
+      <td><%= post.Name %></td> 
+        <td><% if post.Language=="1" %>
+            Multilanguage
+        <% else %>
+            Single Language
+        <% end %>
+        </td>
+
+        <td><%= post.Movie_Scree %></td>
+        <td><%= post.Price %></td>
+        <td><%= post.Description %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post_path(post),
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>     
+    </tr>
+      <% end %>
+
+<h4><%= link_to 'Home', root_path %></h4>
+    </table></p>
+</center>
